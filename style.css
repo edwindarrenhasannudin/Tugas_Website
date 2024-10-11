@@ -1,0 +1,225 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Container Styles */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap; /* Flex wrap untuk mendukung kolom yang teratur */
+    justify-content: space-between;
+}
+
+/* Header Container */
+.header-container {
+    justify-content: space-between;
+    align-items: center; /* Menyelaraskan logo dan navbar secara vertikal */
+}
+
+/* Flex Item Styles */
+.flex-item {
+    flex: 1;
+    margin: 0 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+header {
+    background: rgba(0, 123, 255, 0.85);
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #ffc107;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li {
+    transition: transform 0.3s ease;
+}
+
+.navbar li:hover {
+    transform: translateY(-5px);
+}
+
+.navbar a {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+}
+
+.navbar a:hover {
+    color: #ffc107;
+    border-bottom: 2px solid #ffc107;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 30px;
+    margin: 100px 0 40px;
+    border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+h2 {
+    font-size: 30px;
+    color: #007bff;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #555;
+}
+
+a {
+    color: #007bff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Skills List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+}
+
+ul li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ffc107;
+    font-size: 18px;
+}
+
+/* Footer Styles */
+footer {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        padding: 20px;
+        margin-top: 80px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .flex-item {
+        margin-bottom: 20px;
+    }
+}
